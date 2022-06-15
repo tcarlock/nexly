@@ -4,8 +4,12 @@ import Link from 'next/link';
 import styles from '../../styles/Home.module.css';
 import utilStyles from '../../styles/utils.module.css';
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ req, res }) {
   // const { data, error } = useSWR('/api/user', fetch);
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
 
   const profileData = {
     name: 'Tim Carlock',

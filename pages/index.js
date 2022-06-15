@@ -11,8 +11,8 @@ export default function Home() {
         <meta name="description" content="Take back control of your inbox...job search" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main className="container">
+        <h1 className="text-4xl">
           Nexly
         </h1>
         <p className={styles.description}>

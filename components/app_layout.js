@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Header from './global/header';
 import styles from './layout.module.css';
 
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -22,18 +23,10 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        <Link href="/talent/profile"><a>View My Profile</a></Link>
-        <Link href="/"><a>Browse Jobs</a></Link>
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      <div className="mx-auto bg-slate-100">
+        <Header />
+        <main>{children}</main>
+      </div>
     </div>
   );
 }
