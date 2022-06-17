@@ -7,6 +7,6 @@ export default function TalentRegistrationPage() {
       <main className="container">
         Register and start your search
       </main>
-      </Layout>
+    </Layout>
   )
 }
