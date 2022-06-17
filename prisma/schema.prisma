@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Company {
+  id                Int                @id @default(autoincrement())
+  bio               String?            @db.Text
+  createdAt         DateTime           @default(now()) @db.Timestamp(0)
+  CompanyRecruiters CompanyRecruiters?
+  JobPosting        JobPosting?
+}
+
+model CompanyRecruiters {
+  userId              Int     @unique(map: "userId")
+  companyId           Int     @unique(map: "companyId")
+  isRecruiterInternal Boolean @default(false)
+  Company             Company @relation(fields: [companyId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "companyrecruiters_ibfk_2")
+  User                User    @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "companyrecruiters_ibfk_1")
+}
+
+model JobOutreach {
+  id                                     Int        @id @default(autoincrement())
+  createdAt                              DateTime   @default(now()) @db.Timestamp(0)
+  jobPostingId                           Int
+  createdByUserId                        Int
+  sentToUserId                           Int
+  User_JobOutreach_createdByUserIdToUser User       @relation("JobOutreach_createdByUserIdToUser", fields: [createdByUserId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "joboutreach_ibfk_2")
+  JobPosting                             JobPosting @relation(fields: [jobPostingId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "joboutreach_ibfk_1")
+  User_JobOutreach_sentToUserIdToUser    User       @relation("JobOutreach_sentToUserIdToUser", fields: [sentToUserId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "joboutreach_ibfk_3")
+
+  @@index([createdByUserId], map: "createdByUserId")
+  @@index([jobPostingId], map: "jobPostingId")
+  @@index([sentToUserId], map: "sentToUserId")
+}
+
+model JobPosting {
+  id              Int           @id @default(autoincrement())
+  jobDetails      String?       @db.Text
+  createdAt       DateTime      @default(now()) @db.Timestamp(0)
+  companyId       Int           @unique(map: "companyId")
+  createdByUserId Int
+  Company         Company       @relation(fields: [companyId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "jobposting_ibfk_1")
+  User            User          @relation(fields: [createdByUserId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "jobposting_ibfk_2")
+  JobOutreach     JobOutreach[]
+
+  @@index([createdByUserId], map: "createdByUserId")
+}
+
+model User {
+  id                                            Int                @id @default(autoincrement())
+  name                                          String?            @db.VarChar(255)
+  isRecruiter                                   Boolean            @default(false)
+  email                                         String             @unique(map: "email") @db.VarChar(255)
+  CompanyRecruiters                             CompanyRecruiters?
+  JobOutreach_JobOutreach_createdByUserIdToUser JobOutreach[]      @relation("JobOutreach_createdByUserIdToUser")
+  JobOutreach_JobOutreach_sentToUserIdToUser    JobOutreach[]      @relation("JobOutreach_sentToUserIdToUser")
+  JobPosting                                    JobPosting[]
+  UserProfile                                   UserProfile?
+}
+
+model UserProfile {
+  id        Int      @id @default(autoincrement())
+  bio       String?  @db.Text
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  userId    Int      @unique(map: "userId")
+  User      User     @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "userprofile_ibfk_1")
+}

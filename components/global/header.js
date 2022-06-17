@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Layout({ children, home }) {
+export default function Header({ children, home }) {
   return (
     <header>
       <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6 mb-8">
@@ -15,13 +15,16 @@ export default function Layout({ children, home }) {
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
+            <Link href="/">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Home</a>
+            </Link>
             <Link href="/talent/profile">
               <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">My Profile</a>
             </Link>
             <Link href="/talent/profile">
               <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Browse Jobs</a>
             </Link>
-            <Link href="/talent/connect">
+            <Link href="/recruiter/share-job-posting">
               <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Connect with Talent</a>
             </Link>
           </div>

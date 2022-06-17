@@ -1,37 +1,33 @@
-import useSWR from 'swr';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../../styles/Home.module.css';
 import utilStyles from '../../styles/utils.module.css';
+import rpc from '../../utils/rpc';
 
-export async function getServerSideProps({ req, res }) {
-  // const { data, error } = useSWR('/api/user', fetch);
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
+export default function TalentProfilePage({ profile }) {
+  const [userProfile, setUserProfile] = useState(null)
+  const [isLoading, setLoading] = useState(false)
 
-  const profileData = {
-    name: 'Tim Carlock',
-    outreachFields: ['Role Type', 'Seniority', 'Role Details'],
-    avatar: 'profile.jpg'
-  };
+  useEffect(() => {
+    setLoading(true)
+    rpc.call('get-user-profile').then(({ data }) => {
+      setUserProfile(data)
+      setLoading(false)
+    })
+  }, [])
 
-  return {
-    props: {
-      profile: profileData
-    }
-  };
-}
+  if (isLoading) return <p>Loading...</p>
+  if (!userProfile) return <p>No profile data</p>
 
-export default function TalentProfile({ profile }) {
+  console.log(userProfile);
+
   return (
-    <main className={styles.main}>
+    <main>
       <Link href="/">
         <a>
           <Image
             priority
-            src={`/images/${profile.avatar}`}
+            src={`/images/${userProfile.avatar}`}
             className={utilStyles.borderCircle}
             height={108}
             width={108}
@@ -41,7 +37,7 @@ export default function TalentProfile({ profile }) {
       </Link>
       <h2 className={utilStyles.headingLg}>
         <Link href="/">
-          <a className={utilStyles.colorInherit}>{profile.name}</a>
+          <a className={utilStyles.colorInherit}>{userProfile.name}</a>
         </Link>
       </h2>
     </main>

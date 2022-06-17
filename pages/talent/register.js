@@ -1,7 +1,7 @@
 import Layout from '../../components/app_layout'
 import styles from '../../styles/Home.module.css'
 
-export default function TalentRegistration() {
+export default function TalentRegistrationPage() {
   return (
     <Layout>
       <main className="container">

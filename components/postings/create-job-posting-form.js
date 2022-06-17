@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import rpc from '../../utils/api';
 import { loremIpsum } from "lorem-ipsum";
  
 const defaultCompanyDetails = loremIpsum();
@@ -29,10 +30,7 @@ export default function SignupForm() {
       }}
       validationSchema={SignupSchema}
       onSubmit={(values, actions) => {
-        fetch('/api/send_connect_request',{
-          method: 'POST',
-          body: JSON.stringify(values)
-        }).then((res) => {
+        rpc.sendForm('share_job_posting', values).then((res) => {
           actions.setSubmitting(false);
         })
       }}
