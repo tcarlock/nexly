@@ -30,9 +30,8 @@ export default function SignupForm() {
       }}
       validationSchema={SignupSchema}
       onSubmit={(values, actions) => {
-        rpc.sendForm('share_job_posting', values).then((res) => {
-          actions.setSubmitting(false);
-        })
+        // await rpc.callForForm('share-posting', values);
+        actions.setSubmitting(false);
       }}
     >
       {({ errors, touched }) => (

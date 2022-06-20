@@ -1,4 +1,4 @@
-import CreatePostingForm from '../../components/postings/create-job-posting-form';
+import CreatePostingForm from '../../components/postings/create-posting-form';
 
 export default function CreateJobPostingPage() {
   return (<CreatePostingForm />);

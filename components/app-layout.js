@@ -1,7 +1,5 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Header from './global/header';
-import styles from './layout.module.css';
 
 export const siteTitle = 'Next.js Sample Website';
 
@@ -23,9 +21,9 @@ export default function Layout({ children }) {
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-      <div className='mx-auto bg-slate-100 h-screen'>
+      <div className='bg-slate-100 h-full h-screen'>
         <Header />
-        <main className='container'>{children}</main>
+        <main className='p-10 h-full h-screen'>{children}</main>
       </div>
     </div>
   );
