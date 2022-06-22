@@ -21,9 +21,13 @@ export default function Layout({ children }) {
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-      <div className='bg-slate-100 h-full h-screen'>
+      <div className="bg-slate-100 min-h-full">
         <Header />
-        <main className='p-10 h-full h-screen'>{children}</main>
+        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <main className='mx-auto lg:w-4/5 flex flex-col items-center justify-center px-2 w-full'>
+          {children}
+        </main>
+        </div>
       </div>
     </div>
   );

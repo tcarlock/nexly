@@ -19,7 +19,7 @@ const SignupSchema = Yup.object().shape({
     .required('Required')
 });
 
-export default function SignupForm() {
+export default function CreateJobForm() {
   return (
     <Formik
       initialValues={{
@@ -30,7 +30,7 @@ export default function SignupForm() {
       }}
       validationSchema={SignupSchema}
       onSubmit={(values, actions) => {
-        // await rpc.callForForm('share-posting', values);
+        // await rpc.callForForm('share-job', values);
         actions.setSubmitting(false);
       }}
     >

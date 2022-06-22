@@ -30,52 +30,50 @@ export default function SignupForm() {
       }}
       validationSchema={SignupSchema}
       onSubmit={(values, actions) => {
-        // await rpc.callForForm('share-posting', values);
+        // await rpc.callForForm('share-job', values);
         actions.setSubmitting(false);
       }}
     >
       {({ errors, touched }) => (
         <Form>
-          <div className='container mx-auto lg:w-1/2 flex flex-col items-center justify-center px-2 w-full'>
-            <div className='bg-white px-6 py-8 rounded shadow-md text-black w-full'>
-              <h1 className='mb-8 text-3xl text-center'>Connect With Talent</h1>
-              <p>
-                Provide details the details about the role requested by this developer to increase your chances 
-                of hearing back from them. 
-              </p>
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='isRecruiterInternal'>
-                Are you working on behalf of a third-party recruiter?
-              </label>
-              <Field id='isRecruiterInternal' name='isRecruiterInternal' className='block border border-grey-light w-full p-3 rounded mb-4' as='select'>
-                <option value='true'>Yes</option>
-                <option value='false'>No</option>
-              </Field>
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='firstName'>Company Stage</label>
-              <Field id='companyStage' name='companyStage' className='block border border-grey-light w-full p-3 rounded mb-4' as='select'>
-                <option value='Pre-Seed'>Pre-Seed</option>
-                <option value='Seed'>Seed</option>
-                <option value='Series A'>Series A</option>
-                <option value='Series B'>Series B</option>
-                <option value='Series C'>Series C</option>
-                <option value='Series D'>Series D</option>
-                <option value='Series E'>Series E</option>
-                <option value='Series F+'>Series F+</option>
-                <option value='Public'>Public</option>
-              </Field>
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='Email'>Email</label>
-              <Field id='email' name='email' className='block border border-grey-light w-full p-3 rounded mb-4' />
-              <ErrorMessage name='email' />
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='Email'>Company Overview</label>
-              <Field id='companyDetails' name='companyDetails' className='block border border-grey-light w-full p-3 rounded mb-4' as='textarea' />
-              <ErrorMessage name='companyDetails' />
-              <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='Email'>Role Details</label>
-              <Field id='roleDetails' name='roleDetails' className='block border border-grey-light w-full p-3 rounded mb-4' as='textarea' />
-              <ErrorMessage name='roleDetails' />
-              <div className='mt-8'>
-                <button type='submit' className='w-full text-center py-3 rounded bg-green-600 text-white hover:bg-green-dark focus:outline-none my-1'>
-                  Register
-                </button>
-              </div>
+          <div className='bg-white px-6 py-8 rounded shadow-md text-black w-full'>
+            <h1 className='mb-8 text-3xl text-center'>Connect With Talent</h1>
+            <p>
+              Provide details the details about the role requested by this developer to increase your chances 
+              of hearing back from them. 
+            </p>
+            <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='isRecruiterInternal'>
+              Are you working on behalf of a third-party recruiter?
+            </label>
+            <Field id='isRecruiterInternal' name='isRecruiterInternal' className='block border border-grey-light w-full p-3 rounded mb-4' as='select'>
+              <option value='true'>Yes</option>
+              <option value='false'>No</option>
+            </Field>
+            <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='firstName'>Company Stage</label>
+            <Field id='companyStage' name='companyStage' className='block border border-grey-light w-full p-3 rounded mb-4' as='select'>
+              <option value='Pre-Seed'>Pre-Seed</option>
+              <option value='Seed'>Seed</option>
+              <option value='Series A'>Series A</option>
+              <option value='Series B'>Series B</option>
+              <option value='Series C'>Series C</option>
+              <option value='Series D'>Series D</option>
+              <option value='Series E'>Series E</option>
+              <option value='Series F+'>Series F+</option>
+              <option value='Public'>Public</option>
+            </Field>
+            <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='Email'>Email</label>
+            <Field id='email' name='email' className='block border border-grey-light w-full p-3 rounded mb-4' />
+            <ErrorMessage name='email' />
+            <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='Email'>Company Overview</label>
+            <Field id='companyDetails' name='companyDetails' className='block border border-grey-light w-full p-3 rounded mb-4' as='textarea' />
+            <ErrorMessage name='companyDetails' />
+            <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='Email'>Role Details</label>
+            <Field id='roleDetails' name='roleDetails' className='block border border-grey-light w-full p-3 rounded mb-4' as='textarea' />
+            <ErrorMessage name='roleDetails' />
+            <div className='mt-8'>
+              <button type='submit' className='w-full text-center py-3 rounded bg-green-600 text-white hover:bg-green-dark focus:outline-none my-1'>
+                Register
+              </button>
             </div>
           </div>
         </Form>

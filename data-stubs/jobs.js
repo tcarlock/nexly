@@ -4,7 +4,7 @@ export default {
   "page_size": 20,
   "jobs": [
     {
-      "id": "jobs/104744010049823430",
+      "id": "104744010049823430",
       "title": "Software Engineer III, CorpEng",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -135,7 +135,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/129878178396021446",
+      "id": "129878178396021446",
       "title": "Software Engineer III, Front End, Google Workspace",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -184,7 +184,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/113517282165957318",
+      "id": "113517282165957318",
       "title": "Software Engineer III, Front End, Search",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -284,7 +284,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/77809164341912262",
+      "id": "77809164341912262",
       "title": "Senior Software Engineer, Machine Learning, Geo",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -333,7 +333,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/97656679832658630",
+      "id": "97656679832658630",
       "title": "Software Engineer III, Google Assistant",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -433,7 +433,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/89370546287846086",
+      "id": "89370546287846086",
       "title": "Software Engineer III, Mobile (iOS), Search - United States",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -533,7 +533,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/93449764198064838",
+      "id": "93449764198064838",
       "title": "Software Engineer III, Google Cloud Networking",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -651,7 +651,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/93644214841025222",
+      "id": "93644214841025222",
       "title": "Senior Software Engineer, Machine Learning, Weather, Google Research",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -730,7 +730,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/87457080375419590",
+      "id": "87457080375419590",
       "title": "Senior Software Engineer, Infrastructure, Search",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -813,7 +813,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/78692181541298886",
+      "id": "78692181541298886",
       "title": "Senior Software Engineer, Google Research",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -918,7 +918,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/142778316277850822",
+      "id": "142778316277850822",
       "title": "Senior Software Engineer, Mobile (Android), Google Play",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1018,7 +1018,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/77685451810316998",
+      "id": "77685451810316998",
       "title": "Software Engineer III, Infrastructure, Google Assistant",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1118,7 +1118,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/103025222279406278",
+      "id": "103025222279406278",
       "title": "Software Engineer III, Google Play",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1262,7 +1262,7 @@ export default {
       "has_remote": true
     },
     {
-      "id": "jobs/136246450716582598",
+      "id": "136246450716582598",
       "title": "Software Engineer III, Google Ads",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1427,7 +1427,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/120408839586489030",
+      "id": "120408839586489030",
       "title": "Senior Software Engineer, Infrastructure, Google Cloud Platforms",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1510,7 +1510,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/105791998041957062",
+      "id": "105791998041957062",
       "title": "Software Engineer III, Infrastructure, Google Cloud Storage",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1606,7 +1606,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/86433940782359238",
+      "id": "86433940782359238",
       "title": "Software Engineer III, Front End, Google Cloud Storage",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1672,7 +1672,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/124551337154093766",
+      "id": "124551337154093766",
       "title": "Senior Software Engineer, Engineering Productivity, Google Cloud Business Platforms",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1721,7 +1721,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/88918608060523206",
+      "id": "88918608060523206",
       "title": "Senior Software Engineer, Infrastructure, Google Cloud Data Management",
       "categories": [
         "SOFTWARE_ENGINEERING"
@@ -1821,7 +1821,7 @@ export default {
       "has_remote": false
     },
     {
-      "id": "jobs/109158519774552774",
+      "id": "109158519774552774",
       "title": "Software Engineer III, Infrastructure, Chrome OS",
       "categories": [
         "SOFTWARE_ENGINEERING"
