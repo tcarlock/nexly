@@ -1,6 +1,7 @@
 import { useRouter } from'next/router';
 import { useQuery } from'react-query';
 import { Fragment } from'react'
+import PageSection from '../../components/global/page-section';
 import {
   BriefcaseIcon,
   XIcon,

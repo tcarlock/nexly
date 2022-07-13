@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PageSection from '../components/global/page-section';
 import { useQuery } from 'react-query';
 import MyOpportunities from '../components/user-profile/my-opportunities';
 
@@ -21,18 +22,14 @@ export default function MyProfilePage() {
           alt={myProfile.name}
         />
       </div>
-      <div className='shadow overflow-hidden sm:rounded-md mb-6 w-full'>
-        <div className='px-4 py-5 bg-white space-y-6 sm:p-6'>
-          <h3>About Me</h3>
-          <p>{myProfile.bio}</p>
-        </div>
-      </div>
-      <div className='shadow overflow-hidden sm:rounded-md mb-6 w-full'>
-        <div className='px-4 py-5 bg-white space-y-6 sm:p-6'>
-          <h3>My Opportunities</h3>
-          <MyOpportunities />
-        </div>
-      </div>
+      <PageSection>
+        <h3>About Me</h3>
+        <p>{myProfile.bio}</p>
+      </PageSection>
+      <PageSection>
+        <h3>My Opportunities</h3>
+        <MyOpportunities />
+      </PageSection>
     </>
   )
 }
